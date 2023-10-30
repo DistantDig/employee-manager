@@ -1,0 +1,15 @@
+{
+  "name": "employee-manager",
+  "version": "1.0.0",
+  "description": "Employee managment via node terminal and sql databases.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "DistantDig",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
