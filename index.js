@@ -99,7 +99,7 @@ function executeChoice(choice) {
           queries.addEmployee(choice.addEmployeeFirst, choice.addEmployeeLast, choice.addEmployeeRole, choice.addEmployeeManager);
           break;
         case 'update an employee role':
-          // code block
+          queries.updateEmployee(choice.updateEmployeeRole, choice.updateEmployeeId);
           break;
         default:
           // code block

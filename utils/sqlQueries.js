@@ -62,11 +62,19 @@ function addEmployee(firstName, LastName, roleId, managerId) {
     });
 }
 
+// Function to update role for an employee
+function updateEmployee(roleId, employeeId) {
+    db.query('UPDATE employee SET role_id = ? WHERE id = ?', [roleId, employeeId], function (err, results) {
+        console.log('Employee add');
+    });
+}
+
 module.exports = {
     viewDepartments, 
     viewRoles, 
     viewEmployees,
     addDepartment,
     addRole,
-    addEmployee
+    addEmployee,
+    updateEmployee
 }
