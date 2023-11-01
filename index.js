@@ -90,13 +90,13 @@ function executeChoice(choice) {
           queries.viewEmployees();
           break;
         case 'add a department':
-          // code block
+          queries.addDepartment(choice.addDepartmentName);
           break;
         case 'add a role':
-          // code block
+          queries.addRole(choice.addRoleTitle, choice.addRoleSalary, choice.addRoleDepartment);
           break;
         case 'add an employee':
-          // code block
+          queries.addEmployee(choice.addEmployeeFirst, choice.addEmployeeLast, choice.addEmployeeRole, choice.addEmployeeManager);
           break;
         case 'update an employee role':
           // code block
@@ -104,7 +104,7 @@ function executeChoice(choice) {
         default:
           // code block
       }
-    return init();
+    init();
 }
 
 // Function to initialize

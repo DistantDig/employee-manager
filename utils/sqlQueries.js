@@ -41,8 +41,32 @@ function viewEmployees() {
     });
 }
 
+// Function to add a department
+function addDepartment(name) {
+    db.query('INSERT INTO department (department_name) VALUES (?)', name, function (err, results) {
+        console.log('Department added');
+    });
+}
+
+// Function to add a role
+function addRole(tite, salary, departmentId) {
+    db.query('INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)', [tite, salary, departmentId], function (err, results) {
+        console.log('Role added');
+    });
+}
+
+// Function to add a employee
+function addEmployee(firstName, LastName, roleId, managerId) {
+    db.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)', [firstName, LastName, roleId, managerId], function (err, results) {
+        console.log('Employee add');
+    });
+}
+
 module.exports = {
     viewDepartments, 
     viewRoles, 
-    viewEmployees
+    viewEmployees,
+    addDepartment,
+    addRole,
+    addEmployee
 }
