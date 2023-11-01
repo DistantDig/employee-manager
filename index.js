@@ -1,5 +1,6 @@
 //Packages required for this application
 const inquirer = require('inquirer');
+const queries = require('./utils/sqlQueries');
 
 // Prompt Choices
 const questions = [
@@ -80,13 +81,13 @@ const questions = [
 function executeChoice(choice) {
     switch(choice.first) {
         case 'view all departments':
-          // code block
+          queries.viewDepartments();
           break;
         case 'view all roles':
-          // code block
+          queries.viewRoles();
           break;
         case 'view all employees':
-          // code block
+          queries.viewEmployees();
           break;
         case 'add a department':
           // code block
@@ -103,6 +104,7 @@ function executeChoice(choice) {
         default:
           // code block
       }
+    return init();
 }
 
 // Function to initialize
